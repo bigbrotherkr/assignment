@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>PE Q2</title>
+		<script type="text/javascript">
+			var term = [1,2], i=0, sum=2;
+			function switFunc() {
+				if(i==0) {
+					i=1;
+				}
+				else {
+					i=0;
+				}
+			}
+				//i가 0이면 1로, 1이면 0으로
+			for (i=0; term[i]<=4000000; switFunc(i)) {
+				term[i] = term[0] + term[1];
+					/*피보나치 수열 다음항을 term[i]에 저장
+						switFunc()에 의해 term[0], term[1]에 다음 항이 번갈아가면서 저장됨.
+					*/
+				if(term[i]%2==0) {
+					sum=sum+term[i];
+				}
+				else {
+					sum=sum;
+				}
+					//term[i]가 짝수일때 sum에 더해 합을 구한다
+			}
+			function answer() {
+				alert(sum);
+			}
+		</script>
+	</head>
+	<body onload="answer()">
+	</body>
+</html>

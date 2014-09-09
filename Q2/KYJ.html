@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8"/>
+		<title>2번문제</title>
+	</head>
+	<body>
+		<script>
+			a = 1;
+			b = 2;
+			sum = 0;
+			while ( b < 4000000){
+				if (b % 2 == 0) {
+					sum += b;
+				}
+				c = b;
+				b = a+b;
+				a = c;
+			}
+			document.write (sum);
+		</script>
+	</body>
+</html>

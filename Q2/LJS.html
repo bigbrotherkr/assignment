@@ -1,0 +1,16 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<script>
+	function init(){
+		var num = 4000000;
+		var GR = (Math.sqrt(5) + 1)/2;
+		var n = Math.floor(Math.log(Math.sqrt(5) * num) / (3 * Math.log(GR)));
+		alert((Math.floor(Math.pow(GR, 3 * n + 2) / Math.sqrt(5) + 0.5) - 1) / 2);
+
+	}
+	</script>
+</head>
+<body onload="init()">
+</body>
+</html>

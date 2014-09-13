@@ -1,0 +1,24 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<script>
+	function init(){
+		var num = 600851475143;
+		var lim = Math.floor(Math.sqrt(num));
+		var i = 2;
+		var j, lim2;
+		while(i <= lim) {
+			if(num % i == 0){
+				while(num % i == 0) num = num / i;
+				lim = Math.floor(Math.sqrt(num));
+			}
+			i++;
+		}
+		if(num == 1) alert(i - 1);
+		else alert(num);
+	}
+	</script>
+</head>
+<body onload="init()">
+</body>
+</html>

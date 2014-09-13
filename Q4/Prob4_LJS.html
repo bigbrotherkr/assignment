@@ -1,0 +1,38 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<script>
+	var expnum;
+	function init(){
+		var maxnum = 999;
+		var minnum = 100;
+		var i, j, tmp, digit, max = 1;
+		for(i = maxnum;i >= minnum && i >= max/maxnum;i--){
+			for(j = maxnum; j >= i; j--){
+				tmp = expnum = j * i;
+				digit = Math.floor(Math.log(expnum) / Math.LN10); //실제 자릿수보다 1 작음
+				if (checkFnB(digit)){
+					digit-=2;
+					if (checkFnB(digit)){
+						if((expnum % 11 == 0 || digit == 2) && max < tmp) max = tmp;
+					}
+				}
+			}
+		}
+		alert(max);
+	}
+	function checkFnB(number){
+		var k = Math.round(Math.pow(10, number));
+		if(Math.floor(expnum / k) == expnum % 10) {
+			expnum = expnum % k;
+			expnum = Math.floor(expnum / 10);
+			return true;
+		}
+		else return false;
+	}
+
+	</script>
+</head>
+<body onload="init()">
+</body>
+</html>

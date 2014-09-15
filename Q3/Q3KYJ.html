@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8"/>
+		<title>3번문제</title>
+	</head>
+	<body>
+		<script type="text/javascript">
+			var a = 600851475143;
+			var q = 2;
+			var max = 0;
+			function prime(n){
+				for (var i=2;i*i<=n;i++){
+					if (n % i == 0) return 0;
+				}
+				return 1;
+			}
+
+			while(max<a){
+				while(!prime(q)){
+					q++;
+				}
+				while (a % q ==0){
+					a /= q;
+					if (max<q) max=q;
+				}
+				q++;
+			}
+
+			document.write(max);
+		</script>
+	</body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Largest prime factor</title>
+	<script type="text/javascript">
+		function factorization(){
+			var numToFactorization = 600851475143,
+			//largestPrime = 0;
+			for (var i = 2; i < Math.sqrt(numToFactorization); i++) {
+				if(numToFactorization%i==0&&isPrime(i))
+					document.write(i + "\n");
+			};
+		}
+		function isPrime(num){
+			var numOfFactors = 0;
+			for (var i = 1; i <= Math.sqrt(num); i++) {
+				if(num%i==0)
+					numOfFactors++;
+			};
+			if(numOfFactors==1)
+				return true;
+		}
+	</script>
+</head>
+<body onload="factorization();"></body>
+</html>

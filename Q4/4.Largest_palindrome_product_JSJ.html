@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Largest palindrome product</title>
+	<script type="text/javascript">
+		function isPalindrome(num){
+			num = num.toString();
+			var mirrorNumArray = new Array();
+			for (var i = 0; i < num.length; i++) {
+				mirrorNumArray[i]=num.charAt(num.length-i-1);
+			};
+			var mirrorNum = mirrorNumArray.toString();
+			//replaceall 효과를 준다.
+			mirrorNum = mirrorNum.replace(/,/gi, "");
+			//형변환
+			mirrorNum *=1;
+			if(num==mirrorNum)
+				return true;
+			else
+				return false;
+		}
+		var largestPalindrome = 0;
+		function generateTwoProduct(){
+			for(var i=0;i<1000;i++){
+				for(var j=0;j<1000;j++){
+					if(isPalindrome(i*j)&&largestPalindrome<i*j)
+						largestPalindrome = i*j;
+				}
+			}
+			document.write(largestPalindrome);
+		}
+	</script>
+</head>
+<body onload="generateTwoProduct();"></body>
+</html>

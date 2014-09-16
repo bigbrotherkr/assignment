@@ -1,0 +1,60 @@
+<html>
+	<head>
+		<meta charset="utf-8"/>
+		<style>
+			#modify{
+				padding: 5px;
+				width: 200px;
+				height: 350px;
+				position: relative;
+				background-color: lightyellow;
+			}
+			#title{
+				margin-bottom: 2px;
+			}
+			#leftButton{
+				position: absolute;
+				width: 50%;
+				height: 40px;
+				left: 0px;
+				bottom: 0px;
+				background-color: lightblue;
+				display: inline-block;
+				text-align: center;
+				line-height: 40px;
+			}
+			#rightButton{
+				position: absolute;
+				width: 50%;
+				height: 40px;
+				right: 0px;
+				bottom: 0px;
+				background-color: lightgreen;
+				display: inline-block;
+				text-align: center;
+				line-height: 40px;
+			}
+			h4{
+				margin-bottom: 5px;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="modify">
+			<h3>게시판 수정</h3>
+			<div id="title">
+				<input value="게시판 제목"/><br/>
+				<span>작성권한 </span><select></select><br/>
+				<span>읽기권한 </span><select></select><br/>
+				<span>덧글권한 </span><select></select><br/>
+			</div>
+			<div id="category">
+				<h4>카테고리</h4>
+				<input value="카테고리 제목"/><br/>
+				<span>이전 카테고리 </span><select></select>
+			</div>
+			<div id="leftButton">확인</div>
+			<div id="rightButton">취소</div>
+		</div>
+	</body>
+</html>

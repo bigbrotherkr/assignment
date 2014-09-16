@@ -1,0 +1,24 @@
+<html>
+	<head>
+		<title>ProjectEuler3</title>
+		<script type="text/javascript">
+			var num = 600851475143;
+			var ans;
+			function prime(n){
+				for(var j=2; j*j<=n; j++){
+					if(n%j == 0)
+						return 0;
+				}
+				return 1;
+			}
+			for(var i=Math.floor(Math.sqrt(num)); i>0; i--){
+				if(num % i == 0 && prime(i)==1){
+					ans = i;
+					break;
+				}
+			}
+		</script>
+	</head>
+	<body>
+	</body>
+</html>

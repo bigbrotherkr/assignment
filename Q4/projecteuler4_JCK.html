@@ -1,0 +1,35 @@
+<html>
+	<head>
+		<title>ProjectEuler3</title>
+		<script type="text/javascript">
+			var ans;
+			function palindrome(n){
+				var length = 1 + Math.floor(Math.log(n)/Math.log(10));
+				for(var j=1; j*2<=length; j++){
+					var a = Math.floor((n % Math.pow(10,j))/Math.pow(10,j-1));
+					var b = Math.floor((n % Math.pow(10,length-j+1))/Math.pow(10,length-j));
+					if(a!=b)
+						return 0;
+				}
+				return 1;
+			}
+			function product(n){
+				for(k=100; k<1000; k++){
+					quotient = n/k;
+					if(quotient==Math.floor(quotient) && quotient>=100 && quotient<1000)
+						return 1;
+				}
+				return 0;
+			}
+			for(var i=999*999; i>100*100; i--){
+				if(palindrome(i)==1 && product(i)==1){
+					ans = i;
+					break;
+				}
+			}
+		</script>
+	</head>
+	<body>
+	</body>
+</html>
+

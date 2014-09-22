@@ -1,0 +1,52 @@
+*{
+  font-family:맑은 고딕;
+}
+div{
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+.back1{
+  background-color: #F0F0F0;
+}
+.back2{
+  background-color: #1A1A1A;
+}
+.back3{
+  background-color: #0099CC;
+}
+.back4{
+  background-color: #FF8800;
+}
+.color1{
+  color: #F0F0F0;
+}
+.color2{
+  color: #1A1A1A;
+}
+.color3{
+  color: #0099CC;
+}
+.color4{
+  color: #FF8800;
+}
+.long{
+  width: 100%;
+  height: 60px;
+  padding:3px;
+}
+.medium{
+  width: 45%;
+  height: 80%;
+  padding:5px;
+}
+#center{
+  width:960px;
+  height:1000px;
+  left:0px;
+  right:0px;
+  margin:auto;
+}
+#navbar{
+  //box-shadow:1px 1px 1px gray;
+}

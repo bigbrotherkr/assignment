@@ -1,0 +1,33 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+  <script>
+  	var num = 20;
+  	var numbers = new Array(21);//배열은 0부터 시작하므로 numbers[20]까지 사용하기 위해. numbers는 2부터 num까지의 소수를 판정하는데 사용된다.
+  	var prime = new Array(20);//소수가 저장될 배열.
+  	var numofPrimes = 0; //소수의 갯수.
+  	function findPrime(){
+  	  var i, j;
+  	  var lim = Math.sqrt(num);
+  	  var result = 1;
+  	  for(i = 2;i <= num;i++){//초기화
+  	    numbers[i] = 1;
+  	  }
+  	  for(i = 2;i <= lim;i++){//에라토스테네스의 체(?)를 이용한 소수찾기.
+  	  	if(numbers[i] == 1) {
+  	  	  result *= Math.floor(Math.pow(i, Math.floor(Math.log(num)/Math.log(i))));//num보다 작고 num에 가장 가까운 i의 n제곱을 곱한다.
+  	  	  for(j = i*i;j <= num;j+=i){
+  	  	  	numbers[j] = 0;
+  	  	  }
+  	  	}
+  	  }
+  	  for(i = 2 * Math.floor(i/2) + 1;i <= num;i+=2){ //i=[lim]+1인 상태이다. 이를 이용해서 lim보다 크면서 가장 가까운 홀수를 i의 초기값으로 지정.
+  	  	if(numbers[i] == 1) result *= i;
+  	  }
+  	  alert(result);
+	}
+  </script>
+</head>
+<body onload="findPrime()">
+</body>
+</html>

@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+    <head>
+		<script type="text/javascript">
+			function Euclidean(p,q){
+				if (q==0){ return p;}
+				return Euclidean(q,p%q);
+			} //유클리드 호제법으로 GCD를 구한다
+			var a=1;
+			for (i=1;i<21;i++){
+				a=(a*i)/Euclidean(a,i); // LCM(A,B)*GCD(A,B)=AB
+			}
+			document.write(a); // 다수의 최소공배수는 소수의 최소공배수들의 최소공배수와 같다
+		</script>
+	</head>
+	<body></body>
+</html>

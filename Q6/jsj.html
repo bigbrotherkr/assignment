@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>6.Sum square difference</title>
+	<script type="text/javascript">
+		function sumOfSquareOfNaturalNums(num){
+			var sum=0;
+			for(var i=1;i<=num;i++){
+				sum+=i*i;
+			}
+			return (sum);
+		}
+		function squareOfSumOfNaturalNums(num){
+			var sum = num*(num+1)/2;
+			return (sum*sum);
+		}
+		document.write(squareOfSumOfNaturalNums(100)-sumOfSquareOfNaturalNums(100));
+	</script>
+</head>
+<body></body>
+</html>

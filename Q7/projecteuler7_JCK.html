@@ -1,0 +1,25 @@
+<html>
+	<head>
+		<title>ProjectEuler7</title>
+		<script type="text/javascript">
+			var num = 10001;
+			var i = 2;
+			var sum = 0;
+			function prime(n){
+				for(var j=2; j*j<=n; j++){
+					if( n % j == 0)
+						return 0;
+				}
+				return 1;
+			}
+			while(sum < num){
+				if(prime(i) == 1)
+					sum += 1;
+				i++;
+			}
+			var ans = i-1;
+		</script>
+	</head>
+	<body>
+	</body>
+</html>

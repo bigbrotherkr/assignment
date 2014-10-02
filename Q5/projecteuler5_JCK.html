@@ -1,0 +1,20 @@
+<html>
+	<head>
+		<title>ProjectEuler5</title>
+		<script type="text/javascript">
+			var product = 1;
+			for(var j=1; j<=20; j++)
+				product *= j;
+			for(var i=2520; i<=product; i++){
+				for(var k=1; k<=20; k++){
+					if(i%k != 0)
+						break;
+				}
+				if(k == 21)
+					break;
+			}
+		</script>
+	</head>
+	<body>
+	</body>
+</html>

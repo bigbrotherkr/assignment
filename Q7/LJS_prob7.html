@@ -1,0 +1,28 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+  <script>
+    function findPrime(){
+      var wanted = 10001;//원하는 소수의 갯수
+      var primes = new Array(10002);//n째 소수를 primes[n]에 넣기 위해 wanted+1크기의 배열선언.
+      primes[1] = 2;//primes배열을 사용하기 위해 초기에 소수 하나를 넣어줌.
+      var now = 1;//현재 소수의 갯수
+      var num = 3;//현재 소수인지 판정할 수
+      var i;
+      while(now <= wanted){
+      	for(i = 1;primes[i]*primes[i] <= num;i++){
+      	  if(num % primes[i] == 0) break;
+      	}
+      	if(primes[i]*primes[i] > num) {
+      	  now++;
+      	  primes[now] = num;
+      	}
+      	num+=2;
+      }
+      alert(primes[wanted]);
+    }
+  </script>
+</head>
+<body onload="findPrime();">
+</body>
+</html>

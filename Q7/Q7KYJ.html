@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script type="text/javascript">
+      i=3;
+      count=2;
+      while(count<10001){
+      	i+=2;
+      	p=true;
+      	for(j=2;j*j<=i;j++){
+      	  if(i%j==0){
+      	  	p=false;
+      	  	break;
+      	  }
+      	}
+      	if(p==true){
+      	  count++;
+      	}
+      }
+      document.write(i);
+    </script>
+  </head>
+  <body>
+  </body>
+</html>

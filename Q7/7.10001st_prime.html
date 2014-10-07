@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>7.10001st prime</title>
+	<script type="text/javascript">
+		function isPrime(num){
+			var numOfFactors = 0;
+			for (var i = 1; i <= Math.sqrt(num); i++) {
+				if(num%i==0)
+					numOfFactors++;
+			};
+			if(numOfFactors==1)
+				return true;
+		}
+		function findPrime(index){
+			var order = 0;
+			var num=1;
+			while(order<index){
+				num++;
+				if(isPrime(num))
+					order++;
+			}
+			return (num);
+		}
+		document.write(findPrime(10001));
+	</script>
+</head>
+<body></body>
+</html>

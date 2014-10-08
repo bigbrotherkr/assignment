@@ -1,0 +1,25 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+  <script>
+    function findTriplet(){
+      var num = 1000;
+      var num2=2, num5=3;//(1000/2)를 소인수분해.
+      var i, j;
+      var m, n;
+      for(i = num2;i >= 0;i--) {
+      	for(j = num5;j >= 0;j--) {
+      	  m = Math.floor(Math.pow(2, i)) * Math.floor(Math.pow(5, j));
+      	  if(m*m > num/4&&m*m < num/2){// 2m^2 < num = 2m(m+n) < 4m^2이므로. m>n일때 k(m^2-n^2), 2kmn, k(m^2+n^2)으로 표현됨을 이용.
+      	    n = num/(2*m) - m;
+      	    j = i = -1;
+      	    alert((m*m-n*n)*(m*m+n*n)*2*m*n);
+      	  }
+      	}
+      }
+    }
+  </script>
+</head>
+<body onload="findTriplet();">
+</body>
+</html>

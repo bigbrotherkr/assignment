@@ -3,6 +3,8 @@
 <head>
 	<script>
 	function init(){
+		var startTime = new Date();
+		startTime = startTime.getTime()*10000;
 		var num = 600851475143;
 		var lim = Math.floor(Math.sqrt(num));
 		var i = 2;
@@ -14,8 +16,11 @@
 			}
 			i++;
 		}
+		var endTime = new Date();
+		endTime = endTime.getTime()*10000;
 		if(num == 1) alert(i - 1);
 		else alert(num);
+		alert(endTime - startTime);
 	}
 	</script>
 </head>

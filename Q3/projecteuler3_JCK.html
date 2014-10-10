@@ -4,6 +4,8 @@
 		<script type="text/javascript">
 			var num = 600851475143;
 			var ans;
+			var start = new Date();
+			start = start.getTime();
 			function prime(n){
 				for(var j=2; j*j<=n; j++){
 					if(n%j == 0)
@@ -17,6 +19,9 @@
 					break;
 				}
 			}
+			var end = new Date();
+			end = end.getTime();
+			alert(end - start);
 		</script>
 	</head>
 	<body>
